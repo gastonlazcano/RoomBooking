@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailAttendeesCell" rowHeight="66" id="3Zf-fE-xXB" customClass="DetailAttendeesCell" customModule="RoomBooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Zf-fE-xXB" id="Tge-P2-QQR">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AttendeeName" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-i4-uhQ">
+                        <rect key="frame" x="27" y="23" width="120" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IsOrganizer" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQk-Ei-SQS">
+                        <rect key="frame" x="155" y="24.5" width="79" height="18"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dPS-i4-uhQ" firstAttribute="leading" secondItem="Tge-P2-QQR" secondAttribute="leading" constant="27" id="1sA-cW-dcQ"/>
+                    <constraint firstItem="SQk-Ei-SQS" firstAttribute="centerY" secondItem="dPS-i4-uhQ" secondAttribute="centerY" id="23c-jL-zgn"/>
+                    <constraint firstAttribute="bottom" secondItem="dPS-i4-uhQ" secondAttribute="bottom" constant="22" id="BYy-15-SuG"/>
+                    <constraint firstItem="dPS-i4-uhQ" firstAttribute="top" secondItem="Tge-P2-QQR" secondAttribute="top" constant="23" id="MDR-v8-LNU"/>
+                    <constraint firstItem="SQk-Ei-SQS" firstAttribute="leading" secondItem="dPS-i4-uhQ" secondAttribute="trailing" constant="8" id="Ts8-ZX-pmi"/>
+                    <constraint firstItem="SQk-Ei-SQS" firstAttribute="centerY" secondItem="dPS-i4-uhQ" secondAttribute="centerY" id="ePG-wj-Aj1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="attendeeName" destination="dPS-i4-uhQ" id="Pnu-FP-oxv"/>
+                <outlet property="isOrganizer" destination="SQk-Ei-SQS" id="On1-uK-S9g"/>
+            </connections>
+            <point key="canvasLocation" x="-350.72463768115944" y="103.79464285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
