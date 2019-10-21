@@ -66,6 +66,7 @@ enum  MeetingAnswer: String, Codable {
     case needsAction
     case declined
     case tentative
+    case organizer
     
     func get() -> MeetingAnswer {
         switch self {
@@ -76,6 +77,8 @@ enum  MeetingAnswer: String, Codable {
         case .declined:
             return self
         case .tentative:
+            return self
+        case .organizer:
             return self
         }
     }

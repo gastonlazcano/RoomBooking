@@ -105,6 +105,8 @@ class DetailViewController: UIViewController {
             maybeButton.isSelected = false
         case .needsAction:
             break
+        case .organizer:
+            break
         }
     }
 }

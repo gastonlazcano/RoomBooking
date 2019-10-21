@@ -10,10 +10,10 @@ import Foundation
 
 struct Meeting {
     var title: String
-    var date: String //Esto hay que ver como lo trae el don google
-    var time: String // aca tambien hay que ver si dat + time no son uno solito
-    var room: String // Lo mismo acá, a ver como lo trae don google
-    var answer: State //Esta es la respuesta a la meeting
+    var date: String
+    var time: String
+    var room: String
+    var answer: State
 }
 
 enum State {
