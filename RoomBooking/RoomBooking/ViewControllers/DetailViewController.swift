@@ -45,7 +45,6 @@ class DetailViewController: UIViewController {
     }
     
     private func numberOfGuests(meetingAnswer: MeetingAnswer) -> String{
-        
         let numberOfGuests = handleNumberOfGuests(meetingAnswer: meetingAnswer)
         return "\(numberOfGuests)"
     }
@@ -133,12 +132,14 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell(style: .default, reuseIdentifier: " ")
         }
         if indexPath.section == 0 {
-            //cell.organizer = eventViewModel?.event.organizer
-            //Here should go a logic in which you get who is the organizer from the array of attendees for now i am going to put the same as in the other so the app wont crash
-            cell.attendee = eventViewModel?.event.attendees?[indexPath.row]
+            cell.organizer = eventViewModel?.event.organizer
+            print(cell.organizer.email   )
+           /* Here should go a logic in which you get who is the organizer from the array of attendees for now i am going to put the same as in the other so the app wont crash*/
+           // cell.attendee = eventViewModel?.event.attendees?[indexPath.row]
         } else {
             cell.attendee = eventViewModel?.event.attendees?[indexPath.row]
-        }
+            print(cell.attendee.email)
+         }
         return cell
     }
 }

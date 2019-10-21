@@ -15,7 +15,7 @@ class DetailAttendeesCell: UITableViewCell {
     
     var attendee: Attendee! {
           didSet {
-            if attendee.displayName != nil {
+            if attendee.displayName != "" {
                 attendeeName.text = attendee.displayName
                 isOrganizer.isHidden = true
             } else {
@@ -26,7 +26,7 @@ class DetailAttendeesCell: UITableViewCell {
     }
     var organizer: Organizer! {
           didSet {
-            if organizer.displayName != nil {
+            if organizer.displayName != "" {
                 attendeeName.text = organizer.displayName
                 isOrganizer.text = "Is organizer"
             } else {

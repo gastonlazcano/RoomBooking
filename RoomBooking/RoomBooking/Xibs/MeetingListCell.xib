@@ -23,7 +23,7 @@
                             <constraint firstAttribute="width" constant="8" id="CPL-vN-rAK"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp2-Cl-AyR">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp2-Cl-AyR">
                         <rect key="frame" x="20" y="19" width="34" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -50,6 +50,7 @@
                 <constraints>
                     <constraint firstItem="ndI-zc-7Pm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="0Ck-w3-pb6"/>
                     <constraint firstItem="Qp2-Cl-AyR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="14N-dy-U38"/>
+                    <constraint firstItem="9qz-ur-vTQ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="4gW-uJ-YiK" secondAttribute="trailing" constant="237" id="58n-kb-phq"/>
                     <constraint firstAttribute="bottom" secondItem="4gW-uJ-YiK" secondAttribute="bottom" constant="19" id="59v-Ax-k8w"/>
                     <constraint firstItem="4gW-uJ-YiK" firstAttribute="top" secondItem="Qp2-Cl-AyR" secondAttribute="bottom" constant="35" id="7T6-0j-mB6"/>
                     <constraint firstItem="9qz-ur-vTQ" firstAttribute="top" secondItem="ndI-zc-7Pm" secondAttribute="bottom" constant="35" id="BqM-gk-tUM"/>
@@ -57,6 +58,7 @@
                     <constraint firstItem="Qp2-Cl-AyR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="IQC-LP-MhN"/>
                     <constraint firstItem="ugp-WA-xPW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UlG-qS-yJd"/>
                     <constraint firstItem="4gW-uJ-YiK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Xn2-bC-94X"/>
+                    <constraint firstItem="ndI-zc-7Pm" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Qp2-Cl-AyR" secondAttribute="trailing" constant="248" id="a5P-ZS-iMn"/>
                     <constraint firstItem="ugp-WA-xPW" firstAttribute="leading" secondItem="ndI-zc-7Pm" secondAttribute="trailing" constant="52" id="a9L-Eg-jbV"/>
                     <constraint firstAttribute="bottom" secondItem="ugp-WA-xPW" secondAttribute="bottom" id="mhy-9I-kNu"/>
                     <constraint firstAttribute="bottom" secondItem="9qz-ur-vTQ" secondAttribute="bottom" constant="10" id="rn1-0g-6hM"/>

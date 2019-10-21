@@ -66,11 +66,11 @@ class HomeViewController: UIViewController {
     func filterEvents() {
        
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yy" //"MM/dd/yy, hh:mm a"
+        dateFormatter.dateFormat = "MM/dd/yy"
         let currentDate = dateFormatter.string(from: Date())
         print("HOY ES: " + currentDate)
         for event in eventsArray {
-            let eventDate = event.startDate.split(separator: ",")
+            let eventDate = event.startDate.split(separator: ",") // that gives me in the 0 position of the array an string with this format "MM/dd/yy"
             print("EL EVENTO ES: " + eventDate[0])
             if(eventDate[0] == currentDate) {
                 let eventVm = EventViewModel(event: event)
