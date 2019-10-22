@@ -72,7 +72,6 @@ class HomeViewController: UIViewController {
         
         for event in eventsArray {
             let eventDate = event.startDate.split(separator: ",") // that gives me in the 0 position of the array an string with this format "MM/dd/yy"
-            print("EL EVENTO ES: " + eventDate[0])
             if(eventDate[0] == currentDate) {
                 let eventVm = EventViewModel(event: event)
                 todayMeetings.append(eventVm)

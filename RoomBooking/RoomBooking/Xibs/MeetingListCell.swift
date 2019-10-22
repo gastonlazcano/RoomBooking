@@ -21,7 +21,7 @@ class MeetingListCell: UITableViewCell {
             event?.setup()
             title.text = event?.event.title
             room.text = event?.event.location
-            time.text = event?.event.startDate
+            time.text = event?.event.hour
             answer.text = getUserAnswer().rawValue
             status.backgroundColor = event?.statusColor
             setup()
