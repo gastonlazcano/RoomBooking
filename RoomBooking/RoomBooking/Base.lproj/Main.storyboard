@@ -377,65 +377,18 @@
                                                     <outlet property="delegate" destination="oGu-dA-UWy" id="W6i-hE-p4g"/>
                                                 </connections>
                                             </tableView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJ7-0d-Uyi" userLabel="EventAnswer">
-                                                <rect key="frame" x="20" y="677" width="374" height="40"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W23-sK-cIt">
-                                                        <rect key="frame" x="320" y="5" width="46" height="30"/>
-                                                        <state key="normal" title="Maybe"/>
-                                                        <connections>
-                                                            <action selector="maybeButton:" destination="oGu-dA-UWy" eventType="touchUpInside" id="EeR-yh-r5c"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cap-Df-KiH">
-                                                        <rect key="frame" x="282" y="5" width="30" height="30"/>
-                                                        <state key="normal" title="No"/>
-                                                        <connections>
-                                                            <action selector="noButton:" destination="oGu-dA-UWy" eventType="touchUpInside" id="D2E-e4-NsK"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJU-WW-u6x">
-                                                        <rect key="frame" x="244" y="5" width="30" height="30"/>
-                                                        <state key="normal" title="Yes"/>
-                                                        <connections>
-                                                            <action selector="yesButton:" destination="oGu-dA-UWy" eventType="touchUpInside" id="6oA-NV-faK"/>
-                                                        </connections>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Going?" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eme-Cc-2ZB">
-                                                        <rect key="frame" x="28" y="9.6666666666666288" width="54" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="cap-Df-KiH" firstAttribute="top" secondItem="HJ7-0d-Uyi" secondAttribute="top" constant="5" id="7U9-fl-Ac9"/>
-                                                    <constraint firstItem="SJU-WW-u6x" firstAttribute="top" secondItem="HJ7-0d-Uyi" secondAttribute="top" constant="5" id="9bT-IZ-yIg"/>
-                                                    <constraint firstAttribute="trailing" secondItem="W23-sK-cIt" secondAttribute="trailing" constant="8" id="KsT-GY-hok"/>
-                                                    <constraint firstItem="W23-sK-cIt" firstAttribute="leading" secondItem="cap-Df-KiH" secondAttribute="trailing" constant="8" id="Mpj-Vo-Gdz"/>
-                                                    <constraint firstItem="W23-sK-cIt" firstAttribute="top" secondItem="HJ7-0d-Uyi" secondAttribute="top" constant="5" id="XY2-XO-Fig"/>
-                                                    <constraint firstAttribute="height" constant="40" id="bKM-Eh-O76"/>
-                                                    <constraint firstItem="eme-Cc-2ZB" firstAttribute="leading" secondItem="HJ7-0d-Uyi" secondAttribute="leading" constant="28" id="c0U-h4-jZt"/>
-                                                    <constraint firstItem="eme-Cc-2ZB" firstAttribute="top" secondItem="HJ7-0d-Uyi" secondAttribute="top" constant="9.5" id="emM-Vt-SZI"/>
-                                                    <constraint firstItem="cap-Df-KiH" firstAttribute="leading" secondItem="SJU-WW-u6x" secondAttribute="trailing" constant="8" id="ud7-3C-ZHY"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="vsR-24-HoH" secondAttribute="trailing" constant="20" id="0xv-Pa-vxn"/>
                                             <constraint firstItem="Jv1-Kb-Hpr" firstAttribute="top" secondItem="Gvg-Ae-CBs" secondAttribute="bottom" constant="8" id="1Z5-Wn-KIp"/>
-                                            <constraint firstItem="HJ7-0d-Uyi" firstAttribute="leading" secondItem="ULR-bY-mwH" secondAttribute="leading" constant="20" id="IsH-2x-Kf9"/>
-                                            <constraint firstItem="HJ7-0d-Uyi" firstAttribute="top" secondItem="vsR-24-HoH" secondAttribute="bottom" constant="8" id="JwO-dg-GjM"/>
+                                            <constraint firstAttribute="bottom" secondItem="vsR-24-HoH" secondAttribute="bottom" constant="56" id="1jb-MD-g34"/>
                                             <constraint firstItem="vsR-24-HoH" firstAttribute="leading" secondItem="ULR-bY-mwH" secondAttribute="leading" constant="20" id="KaU-42-GFa"/>
-                                            <constraint firstAttribute="bottom" secondItem="HJ7-0d-Uyi" secondAttribute="bottom" constant="8" id="NhV-O5-hBd"/>
                                             <constraint firstItem="Jv1-Kb-Hpr" firstAttribute="leading" secondItem="ULR-bY-mwH" secondAttribute="leading" constant="20" id="RZw-Ah-GQ5"/>
                                             <constraint firstAttribute="trailing" secondItem="Jv1-Kb-Hpr" secondAttribute="trailing" constant="20" id="Tq9-FT-6W7"/>
                                             <constraint firstItem="vsR-24-HoH" firstAttribute="top" secondItem="Jv1-Kb-Hpr" secondAttribute="bottom" constant="8" id="a0m-ng-08W"/>
                                             <constraint firstAttribute="trailing" secondItem="Gvg-Ae-CBs" secondAttribute="trailing" constant="20" id="kKO-wG-TNp"/>
                                             <constraint firstItem="Gvg-Ae-CBs" firstAttribute="leading" secondItem="ULR-bY-mwH" secondAttribute="leading" constant="20" id="ovp-9B-0vZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="HJ7-0d-Uyi" secondAttribute="trailing" constant="20" id="qJn-qW-TOr"/>
                                             <constraint firstItem="Gvg-Ae-CBs" firstAttribute="top" secondItem="ULR-bY-mwH" secondAttribute="top" constant="8" id="xyJ-qZ-waL"/>
                                         </constraints>
                                     </view>
@@ -466,15 +419,11 @@
                         <outlet property="attendeesList" destination="vsR-24-HoH" id="ZTC-tm-YH4"/>
                         <outlet property="dateTimeLabel" destination="3Ht-ta-wsO" id="gTs-SK-fDP"/>
                         <outlet property="eventNameLabel" destination="jE9-Tc-Xyl" id="lfW-ia-b2p"/>
-                        <outlet property="goingLabel" destination="eme-Cc-2ZB" id="ad8-6o-qBi"/>
                         <outlet property="guestsNumber" destination="vS1-Vk-Wo2" id="wIx-Dz-Cz4"/>
-                        <outlet property="maybeButton" destination="W23-sK-cIt" id="wbz-Tc-gCX"/>
                         <outlet property="maybeQuantity" destination="4bW-3a-vVU" id="nuE-cM-kDt"/>
                         <outlet property="noAnswerQuantity" destination="Kdp-cF-31e" id="qrg-oW-l1J"/>
-                        <outlet property="noButton" destination="cap-Df-KiH" id="ZUa-30-hGv"/>
                         <outlet property="noQuantity" destination="RnP-Ic-bd1" id="XYl-gQ-n5d"/>
                         <outlet property="roomBookedLabel" destination="6IS-Aa-dBE" id="aHc-9J-V5a"/>
-                        <outlet property="yesButton" destination="SJU-WW-u6x" id="OfU-P6-Esj"/>
                         <outlet property="yesQuantity" destination="Me3-US-dI3" id="Uxd-My-R0Z"/>
                     </connections>
                 </viewController>

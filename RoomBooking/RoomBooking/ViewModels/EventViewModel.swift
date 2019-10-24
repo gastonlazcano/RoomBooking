@@ -32,17 +32,24 @@ class EventViewModel {
             self.statusColor = .red
         case .tentative:
             self.statusColor = .blue
+        case .organizer:
+            self.statusColor = .orange
         }
     }
     
     private func getAttendee() -> Attendee? {
-        let email = UserDefaultManager().getUserEmail()
+        let user = UserDefaultManager()
         guard let attendees = event.attendees else { return nil }
+       
+        if(user.getUserEmail() == event.organizer.email){
+            return Attendee(isOrganizer: true, email: user.getUserEmail(), displayName: user.getUserName(), responseStatus: .organizer)
+        }
         for attendee in (attendees) {
-            if (attendee.email == email) {
+            if (attendee.email == user.getUserEmail()) {
                 return attendee
             }
         }
+        
         return nil
     }
 }

@@ -202,7 +202,6 @@ extension UIViewController {
                 let organizerDisplayName = event.organizer?.displayName ?? ""
                 
                 let organizer = Organizer(email: organizerMail, displayName: organizerDisplayName)
-                
                 let startDate = DateFormatter.localizedString(
                     from: start.date,
                     dateStyle: .short,

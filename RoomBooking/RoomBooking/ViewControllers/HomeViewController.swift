@@ -64,46 +64,36 @@ class HomeViewController: UIViewController {
     }
     
     func filterEvents() {
-       
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yy" //"MM/dd/yy, hh:mm a"
+        dateFormatter.dateFormat = "MM/dd/yy"
         let currentDate = dateFormatter.string(from: Date())
+        let tomorrowDate = getTomorrow()
         print("HOY ES: " + currentDate)
+        
         for event in eventsArray {
-            let eventDate = event.startDate.split(separator: ",")
-            print("EL EVENTO ES: " + eventDate[0])
+            let eventDate = event.startDate.split(separator: ",") // that gives me in the 0 position of the array an string with this format "MM/dd/yy"
             if(eventDate[0] == currentDate) {
                 let eventVm = EventViewModel(event: event)
                 todayMeetings.append(eventVm)
             }
+            else if(eventDate[0] == tomorrowDate) {
+                let eventVm = EventViewModel(event: event)
+                tomorrowMeetings.append(eventVm)
+            }
         }
     }
     
-    func getTomorrow() -> Date {
+    func getTomorrow() -> String {
         
-        var dateComponents = DateComponents()
-        dateComponents.setValue(1, for: .day); // +1 day
-        
-        let now = Date() // Current date
-        let tomorrow = Calendar.current.date(byAdding: dateComponents, to: now)  // Add the DateComponents
-        
-        return tomorrow!
-    }
-   /* func getMonthDays(month: Int) -> Int {
-        var days: Int
-        switch month {
-        case 4,6,9,11:
-            days = 30;
-        case 1,3,5,7,8,10,12:
-            days = 31;
-        case 2:
-            days = 28;
-        default:
-            days = 0
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy"
+        if let tomorrow = Date().tomorrow {
+            let tomorrowString = dateFormatter.string(from: tomorrow)
+            print("\(tomorrowString)")
+            return tomorrowString
         }
-        return days
+        return ""
     }
- */
 }
 
 //TABLE VIEW
@@ -253,4 +243,8 @@ extension HomeViewController: UISearchBarDelegate {
     }
 }
 
-
+extension Date {
+    var tomorrow: Date? {
+        return Calendar.current.date(byAdding: .day, value: 1, to: self)
+    }
+}

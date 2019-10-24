@@ -21,6 +21,13 @@ struct Event: Codable {
     var attendees: [Attendee]?
     var organizer: Organizer
     
+    var hour: String {
+        return String(startDate.split(separator: ",")[1])
+    }
+    var date: String{
+        return String(startDate.split(separator: ",")[0])
+    }
+    
     init (title: String, description: String, location: String, startdate: String, enddate: String, attendees: [Attendee], organizer: Organizer) {
         self.title = title
         self.description = description
@@ -66,6 +73,7 @@ enum  MeetingAnswer: String, Codable {
     case needsAction
     case declined
     case tentative
+    case organizer
     
     func get() -> MeetingAnswer {
         switch self {
@@ -76,6 +84,8 @@ enum  MeetingAnswer: String, Codable {
         case .declined:
             return self
         case .tentative:
+            return self
+        case .organizer:
             return self
         }
     }

@@ -13,16 +13,16 @@ class MeetingListCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var room: UILabel!
     @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var answer: UIButton!
     @IBOutlet weak var status: UIView!
+    @IBOutlet weak var answer: UILabel!
     
     var event: EventViewModel?{
         didSet {
             event?.setup()
             title.text = event?.event.title
             room.text = event?.event.location
-            time.text = event?.event.startDate
-            answer.backgroundColor = event?.statusColor
+            time.text = event?.event.hour
+            answer.text = getUserAnswer().rawValue
             status.backgroundColor = event?.statusColor
             setup()
         }
@@ -45,5 +45,21 @@ class MeetingListCell: UITableViewCell {
     func setup(){
         title.font = UIFont.boldSystemFont(ofSize: 20.0)
         time.font = UIFont.boldSystemFont(ofSize: 17.0)
+    }
+    
+    private func getUserAnswer() -> MeetingAnswer {
+        let userEmail = UserDefaultManager().getUserEmail()
+        let organizer = event?.event.organizer
+        if (organizer?.email == userEmail){
+            return .organizer
+        }
+        if let attendeeArray = event?.event.attendees{
+            for attendee in  attendeeArray {
+                if (attendee.email == userEmail) {
+                    return attendee.responseStatus.get()
+                }
+            }
+        }
+        return .organizer
     }
 }
